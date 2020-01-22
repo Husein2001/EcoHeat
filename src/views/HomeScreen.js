@@ -7,6 +7,10 @@ import { Coins } from '../assets/coins.png';
 import axios from 'axios'
 
 export default class HomeScreen extends React.Component {
+    static navigationOptions = {
+        drawerLabel: 'Home',
+
+    };
 
     state = {
         AQI: 0,
@@ -28,6 +32,10 @@ export default class HomeScreen extends React.Component {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <View style={styles.menuBar}>
+                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
+                            <Image style={styles.coinsImg} source={require('../assets/burger.png')} />
+
+                        </TouchableOpacity>
                     </View>
                     <View style={styles.coinsBar}>
                         <Text style={{ fontSize: 20, color: '#919191' }}>33</Text>
@@ -56,6 +64,10 @@ export default class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    homeNavItem: {
+        width: '100%',
+        height: 30,
+    },
     container: {
         backgroundColor: 'white',
         flex: 1,
