@@ -10,6 +10,7 @@ export default class HomeScreen extends React.Component {
     static navigationOptions = {
         drawerLabel: 'Home',
 
+
     };
 
     state = {
@@ -47,15 +48,15 @@ export default class HomeScreen extends React.Component {
                     <Text style={styles.screenTitle}>TEMPERATURE</Text>
                     <View elevation={5} style={styles.circle}>
                         <View style={styles.circleInner}>
-                            <Text style={{ fontSize: 64 }}>  {this.state.TEMP}°</Text>
-                            <Text style={{ fontSize: 18 }}>CELSISUS</Text>
+                            <Text style={{ fontSize: 64, fontFamily: 'Montserrat-Medium', }}>{this.state.TEMP}</Text>
+                            <Text style={{ fontSize: 16, fontFamily: 'Montserrat-Light', }}>CELSIUS</Text>
 
                         </View>
                     </View>
                     <View style={styles.aqiBox}>
-                        <Text style={{ fontSize: 21 }}>Sarajevo Air Quality {this.state.AQI}</Text>
+                        <Text style={{ fontSize: 21, fontFamily: 'Montserrat-Medium' }}>Sarajevo Air Quality {this.state.AQI}</Text>
                     </View>
-                    <Text>Save mode - recommended</Text>
+                    <Text style={{ fontSize: 16, fontFamily: 'Montserrat-Light' }}>Save mode - recommended</Text>
                     <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>Save mode</Text></TouchableOpacity>
                 </View>
             </View>
@@ -95,7 +96,8 @@ const styles = StyleSheet.create({
     },
     coinsImg: {
         width: 35,
-        height: 31
+        height: 31,
+        marginLeft: 8
     },
     userInfoBox: {
         flexDirection: 'column',
@@ -105,6 +107,7 @@ const styles = StyleSheet.create({
     },
 
     userMessage: {
+        fontFamily: 'Montserrat-SemiBold',
         color: '#87B940',
         fontSize: 32,
     },
@@ -112,7 +115,8 @@ const styles = StyleSheet.create({
     screenTitle: {
         marginTop: 32 - 16 - 8,
         fontSize: 20,
-        color: 'grey'
+        color: 'grey',
+        fontFamily: 'Montserrat-Light',
     },
 
     circle: {
@@ -169,6 +173,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 24,
         color: 'white',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        fontFamily: 'Montserrat-SemiBold',
     }
 })

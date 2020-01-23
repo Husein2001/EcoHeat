@@ -11,8 +11,8 @@ export default customNavProf = (props) => {
     return (
         <View style={styles.profileContainer}>
             <Image style={styles.profileImg} source={require('../assets/avatar.png')} />
-            <Text style={{ fontSize: 20 }}>Hamo Musmulja</Text>
-            <Text style={{ fontSize: 12 }}>Rovokopac uRudniku</Text>
+            <Text style={{ fontSize: 20, fontFamily: ' Montserrat-SemiBold' }}>Alen Hodzic</Text>
+            <Text style={{ fontSize: 16, fontFamily: 'Montserrat-Light' }}>Coins: 33</Text>
             <View style={{ width: '100%', marginTop: 50 }}>
                 <DrawerItems {...props} />
 
